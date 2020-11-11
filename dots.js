@@ -37,6 +37,6 @@ class Dot {
   show() {
     noStroke();
     fill(200);
-    circle(this.x, this.y, this.size);
+    circle(this.x, this.y, noise((frameCount / 50) + this.x / 10, (frameCount / 50) + this.y / 10) * this.size * 2);
   }
 }
